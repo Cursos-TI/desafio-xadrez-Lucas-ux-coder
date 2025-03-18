@@ -34,9 +34,19 @@ int main(){
     rainha++;
    }
    
-   
+   // Movimentação do cavalo 
 
+printf("\n Movimentação do cavalo!!\n");
+int cavalo = 1;
 
+while (cavalo == 1)
+{
+   for ( cavalo = 0; cavalo < 2; cavalo++)
+   {
+     printf("Movendo-se para baixo...\n");
+   }
+ printf("Mvendo-se para a esquerda...\n");  
+}
 
 
 
