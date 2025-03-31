@@ -1,47 +1,55 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
+
+void moverpecas(int casas){
+    
+    if (casas > 0)
+{
+    printf("Movendo-se para a direita...\n");
+    moverpecas(casas - 1);
+    }
+}
+
+void bispo(int pecas){
+    if(pecas > 0){
+        printf("Movendo-se para cima e para direita...\n");
+        bispo(pecas - 1);
+    }
+}
+
+void pecarainha(int rainhaa){
+    if(rainhaa > 0){
+        printf("Movendo-se para a esquerda...\n");
+        pecarainha(rainhaa - 1);
+    }
+}
+
 int main(){
 
    //movimento da Torre cinco casas para a direita
-    printf("Movimentação do Torre!!\n");
+    printf("Movimentação da Torre!!\n");
    
-    for(int torre = 0; torre < 5; torre++)
-   
-    {
-   printf("Movendo-se para a direita...\n");
-    }
- 
-//movimento do Bispo cinco casas na diagonal 
-
-   int bispo = 0;
-   printf("\n Movimentação do Bispo!!\n");
-  
-   do
-   {
+    int casas = 5;
+    moverpecas(casas);
     
-    printf("Movendo-se para cima e para direita...\n");
-    bispo++;
-   } while (bispo < 5);
+ //movimento do Bispo cinco casas na diagonal 
+    printf("\nMovimentação do Bispo!!\n");
+    
+    int pecabispo = 5;
+    bispo(pecabispo);
 
    // movimento da rainha oito casas para a esquerda
-   int rainha = 0;
-   printf("\n Movimento da Rainha!!\n");
-   
-   while (rainha < 8)
-   {
-    printf("Movendo-se para a esquerda...\n");
-    rainha++;
-   }
-   
-   // Movimentação do cavalo 
+    printf("\n Movimento da Rainha!!\n");
+   int rainha = 8;
+    pecarainha(rainha);
+  
+    // Movimentação do cavalo 
 
-printf("\n Movimentação do cavalo!!\n");
-int cavalo = 1;
+    printf("\n Movimentação do cavalo!!\n");
+   int cavalo = 0;
 
-while (cavalo == 1)
+while (cavalo == 0)
 {
-   for ( cavalo = 0; cavalo < 2; cavalo++)
+   for ( cavalo = 0; cavalo < 1; cavalo++)
    {
      printf("Movendo-se para baixo...\n");
    }
